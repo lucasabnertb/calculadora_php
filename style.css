@@ -1,0 +1,126 @@
+:root {
+  --azul-borda: rgb(31, 144, 243);
+  --azul-fundo: rgba(15, 128, 172, 0.384);
+  --gold: rgb(175, 167, 48);
+  --laranja: rgb(218, 131, 0);
+
+}
+
+html {
+  background: rgb(90, 138, 163);
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+
+}
+
+
+.container {
+  align-items: center;
+  display: flex;
+  width: 940px;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  text-align: center;
+  display: grid;
+  padding: 20px 10px 10px 10px;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(5, 25, 41, 0.700);
+  width: 300px;
+  margin: 50px auto;
+  /*border: var(--azul-borda) 4px solid;*/
+  border-radius: 15px;
+
+}
+
+.resultado {
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0, 0, 0, 0.555);
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  height: 80px;
+  width: 272px;
+  text-align: baseline;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 38px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.button {
+  background-color: rgba(5, 25, 41, 0.800);
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  margin: 4px auto 0 auto;
+  width: 65px;
+  height: 50px;
+  border: rgb(31, 144, 243) 2px solid;
+  border-radius: 10px;
+  text-align: center;
+  color: whitesmoke;
+  cursor: pointer;
+
+}
+
+#igual {
+  grid-column-start: 4;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  height: 104px;
+  background: var(--laranja);
+  border: none;
+  font-size: 24px;
+
+}
+
+#zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  width: 135px;
+}
+
+.button:hover {
+  background-color: rgba(30, 125, 180, 0.664);
+  border: var(--azul-borda) 2px solid;
+  border-radius: 10px;
+
+}
+
+#igual:hover {
+  background: rgba(30, 125, 180, 0.664);
+  transition: all 0.5s;
+}
+
+.button.ativa,
+.button:active {
+  background-color: var(--laranja);
+  color: whitesmoke;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+
+
+footer {
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
