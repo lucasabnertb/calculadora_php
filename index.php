@@ -24,7 +24,7 @@ if(isset($_POST['op'])){
 }
 
 if(isset($_POST['clear'])){
-  setcookie($cookie_name1,$cookie_value1,$cookie_name2,$cookie_value2, time () -3600 ,"/");
+  unset($cookie_name1,$cookie_value1,$cookie_name2,$cookie_value2);
 }
 
 if(isset($_POST['igual'])){
@@ -41,13 +41,20 @@ if(isset($_POST['igual'])){
         $result = $_COOKIE['number'] * $num; 
           break;
       case "/":
-        $result = $_COOKIE['number'] / $num;
+        if ($num != 0){        
+          $result = $_COOKIE['number'] / $num;
+        }else{
+          $result = "Nao e possivel dividir por zero" ;
+        }
           break;
       case "%":
         $result = ($_COOKIE['number'] * $num)/100;
           break;
                       
   }
+
+
+
   $num = $result;
 }
 ?>
@@ -75,7 +82,7 @@ if(isset($_POST['igual'])){
 
     <form class="calculadora" method="POST" action="#">
 
-      <input type="text" class="resultado" name="display" value="<?php echo $num; ?>">
+      <input type="text" class="resultado" name="display" tabindex="0" value="<?php echo $num; ?>">
 
       <input class="button" type="submit" name="clear" value="C">
       <input class="button" type="submit" name="op" value="%">
