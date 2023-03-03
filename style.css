@@ -7,8 +7,10 @@
 }
 
 html {
-  background: rgb(90, 138, 163);
-  background-attachment: fixed;
+  background-image: url(./fundo1.jpg);
+  /*background: rgb(90, 138,163);
+  background-attachment: unset;*/
+  background-size: 100%;
 }
 
 h1 {
@@ -37,7 +39,6 @@ form {
   background: rgba(5, 25, 41, 0.700);
   width: 300px;
   margin: 50px auto;
-  /*border: var(--azul-borda) 4px solid;*/
   border-radius: 15px;
 
 }
