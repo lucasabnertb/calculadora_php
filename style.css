@@ -3,7 +3,6 @@
   --azul-fundo: rgba(15, 128, 172, 0.384);
   --gold: rgb(175, 167, 48);
   --laranja: rgb(218, 131, 0);
-
 }
 
 html {
@@ -19,7 +18,6 @@ h1 {
   color: white;
   text-align: center;
   margin-top: 80px;
-
 }
 
 .container {
@@ -40,7 +38,6 @@ form {
   width: 300px;
   margin: 50px auto;
   border-radius: 15px;
-
 }
 
 .resultado {
@@ -74,7 +71,6 @@ form {
   text-align: center;
   color: whitesmoke;
   cursor: pointer;
-
 }
 
 #igual {
@@ -85,7 +81,6 @@ form {
   background: var(--laranja);
   border: none;
   font-size: 24px;
-
 }
 
 #zero {
@@ -99,7 +94,6 @@ form {
   background-color: rgba(30, 125, 180, 0.664);
   border: var(--azul-borda) 2px solid;
   border-radius: 10px;
-
 }
 
 #igual:hover {
