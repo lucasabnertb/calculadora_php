@@ -1,14 +1,21 @@
+/* preciso percorrer o array que armazena os valores dos inputs. 
+  printar na tela as operacoes 
+  armazenar em cookie o valor de cada input numerico e operacao. 
+  criar uma funcao que exibe na tela o resultado*/
+
+
 <?php
 
-$num = "";
+$num = [];
 $cookie_name1 = "number";
 $cookie_value1 = "";
 $cookie_name2 = "op";
 $cookie_value2 = "";
+$resultado = "";
 
 
 if(isset($_POST['number'])){
-  $num = $_POST['display'].$_POST['number'];
+  $num[0] = $_POST['display'].$_POST['number'];
 }
 else{
   $num="";
@@ -20,12 +27,15 @@ if(isset($_POST['op'])){
   
   $cookie_value2= $_POST['op'];
   setcookie($cookie_name2,$cookie_value2,time()+(86400*30),"/");
+
   $num = "";
 }
 
 if(isset($_POST['clear'])){
   unset($cookie_name1,$cookie_value1,$cookie_name2,$cookie_value2);
 }
+
+
 
 if(isset($_POST['igual'])){
   $num=$_POST['display'];
@@ -52,11 +62,12 @@ if(isset($_POST['igual'])){
           break;
                       
   }
+  $resultado = $result;
+  $num="";
 
-
-
-  $num = $result;
 }
+
+
 ?>
 
 
@@ -82,7 +93,7 @@ if(isset($_POST['igual'])){
 
     <form class="calculadora" method="POST" action="#">
 
-      <input type="text" class="resultado" name="display" tabindex="0" value="<?php echo $num; ?>">
+      <input type="text" class="resultado" name="display" tabindex="0" value="<?php echo $result; ?>">
 
       <input class="button" type="submit" name="clear" value="C">
       <input class="button" type="submit" name="op" value="%">
